@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Card from './Card';
 
 const Busca = () => {
 
@@ -27,7 +28,7 @@ const Busca = () => {
             <button onClick={buscarProfessores} >Buscar</button>
             {professores.map( (professorAtual) => {
                 return (
-                    <h4 key={professorAtual.nome}>{professorAtual.nome}</h4>
+                    <Card nome={professorAtual.nome} area={professorAtual.area} />
                 );
             } )}
         </div>
