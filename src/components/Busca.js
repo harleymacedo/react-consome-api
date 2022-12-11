@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Card from './Card';
+import './Busca.css';
 
 const Busca = () => {
 
@@ -22,7 +23,7 @@ const Busca = () => {
     }
 
     return (
-        <div>
+        <div className='container--busca'>
             <h3>Busca de Professores</h3>
             <input type='text' placeholder='Nome:' onChange={atualizaValor} />
             <button onClick={buscarProfessores} >Buscar</button>
