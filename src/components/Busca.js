@@ -24,14 +24,19 @@ const Busca = () => {
 
     return (
         <div className='container--busca'>
-            <h3>Busca de Professores</h3>
-            <input type='text' placeholder='Nome:' onChange={atualizaValor} />
-            <button onClick={buscarProfessores} >Buscar</button>
-            {professores.map( (professorAtual) => {
-                return (
-                    <Card nome={professorAtual.nome} area={professorAtual.area} />
-                );
-            } )}
+            <div className='container--busca-formulario'>
+                <h3>Busca de Professores</h3>
+                <input type='text' placeholder='Nome:' onChange={atualizaValor} />
+                <button onClick={buscarProfessores} >Buscar</button>
+            </div>
+            
+            <div className='container--busca-resultado'>
+                {professores.map( (professorAtual, index) => {
+                    return (
+                        <Card nome={professorAtual.nome} area={professorAtual.area} ordem={index} />
+                    );
+                } )}
+            </div>
         </div>
     );
 }

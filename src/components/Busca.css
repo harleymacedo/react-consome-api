@@ -1,6 +1,25 @@
 .container--busca {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.container--busca-formulario {
     border: 1px solid green;
-    width: 300px;
-    height: 200px;
+    margin-top: 40px;
+    width: 600px;
+    height: 150px;
     text-align: center;
+}
+
+.container--busca-resultado {
+    width: 600px;
+    height: 400px;
+    margin-top: 40px;
+    border: 1px solid blue;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }

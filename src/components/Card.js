@@ -4,7 +4,7 @@ import './Card.css';
 const Card = (props) => {
     return (
         <div className='container'>
-            <p>Professor</p>
+            <p>N.{props.ordem}</p>
             <ul>
                 <li>Nome: {props.nome}</li>
                 <li>Área: {props.area}</li>
